@@ -80,15 +80,21 @@ h1{
     padding-top: 0px;
 }
 #h1-2
-,#h1-3{
-    width: 100px;
+,#h1-3
+,#roundResult{
+    width: 120px;
     background-color: rgb(75, 243, 243);
+    padding-top: 9px;
 }
 #h1-2{
+    margin-top: 0px;
     margin-bottom: 0px;
 }
 #h1-3{
     margin-top: 0px;
+}
+#roundResult{
+    margin-bottom: 0px;
 }
 
 #h1-4
