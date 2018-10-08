@@ -1,20 +1,4 @@
 
-function reset() {
-  var targetNumber = Math.floor(Math.random() * 102)+19;  
-  counter = 0;
-  $("#totalScore").text(counter);
-  $("#number-to-guess").text(targetNumber);
-  for (i=0; i<4; i++)
-  {
-   numberOptions.pop();
-  }
-  for (i=0; i<4; i++)
-  {
-  numberOptions.push(Math.floor(Math.random() * 12)+1);
-  console.log(numberOptions[i]);
-  imageCrystal.attr("data-crystalvalue", numberOptions[i]);
-  }
-}
 
 var targetNumber = Math.floor(Math.random() * 102)+19;
 
@@ -58,6 +42,24 @@ var arrImg = [
 
     // Lastly, each crystal image (with all it classes and attributes) will get added to the page.
     $("#crystals").append(imageCrystal);
+  }
+
+  function reset() {
+    $("#roundResult").text("");
+    targetNumber = Math.floor(Math.random() * 102)+19;  
+    counter = 0;
+    $("#totalScore").text(counter);
+    $("#number-to-guess").text(targetNumber);
+    for (i=0; i<4; i++)
+    {
+     numberOptions.pop();
+    }
+    for (i=0; i<4; i++)
+    {
+    numberOptions.push(Math.floor(Math.random() * 12)+1);
+    console.log(numberOptions[i]);
+    imageCrystal.attr("data-crystalvalue", numberOptions[i]);
+    }
   }
 
   // This time, our click event applies to every single crystal on the page. Not just one.
